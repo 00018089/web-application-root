@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  h2= review.title
+  p Author: #{review.author}
+  p Genre: #{review.genre}
+  p Review: #{review.content}
+  if review.rating
+    p Rating: #{review.rating} / 5
+  a(href="/reviews/edit/" + review._id) Edit
+  form(action="/reviews/delete/" + review._id, method="POST")
+    button(type="submit") Delete
+  a(href="/reviews") Back to all reviews

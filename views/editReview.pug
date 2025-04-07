@@ -1,0 +1,26 @@
+extends layout
+
+block content
+  h2 Edit Review
+  form(action="/reviews/edit/" + review._id, method="POST")
+    label(for="title") Title:
+    input(type="text", name="title", value=review.title, required)
+    br
+
+    label(for="author") Author:
+    input(type="text", name="author", value=review.author, required)
+    br
+
+    label(for="genre") Genre:
+    input(type="text", name="genre", value=review.genre, required)
+    br
+
+    label(for="content") Review:
+    textarea(name="content")= review.content
+    br
+
+    label(for="rating") Rating (1-5):
+    input(type="number", name="rating", value=review.rating, min="1", max="5")
+    br
+
+    button(type="submit") Save Changes
