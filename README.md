@@ -102,5 +102,7 @@ Project Structure
 │   │   └── style.css
 │   └── /javascripts
 
+
 Links :
 GitHub Repository : https://github.com/00018089/web-application-root
+The site was deployed on Render : https://web-application-root.onrender.com/
